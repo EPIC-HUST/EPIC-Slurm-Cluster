@@ -477,6 +477,18 @@ cluster_users:
       - individual
     ssh_access:
       - epic-cluster-compute-a100-01
+
+  - name: fengyuqing
+    uid: 19002
+    gid: 19002
+    slurm_account: individual
+    home: /home/fengyuqing
+    shell: /bin/bash
+    groups:
+      - individual
+    ssh_access:
+      - epic-cluster-compute-a100-01
+
 # Access groups contain stable names and GIDs only. Exact membership is derived
 # from cluster_users[].groups so it is maintained in one place.
 access_groups:
