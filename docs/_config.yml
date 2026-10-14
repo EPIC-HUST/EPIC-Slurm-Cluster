@@ -1,6 +1,6 @@
 title: EPIC 集群文档
 description: EPIC Slurm Cluster 使用与维护文档
-url: https://loren5555.github.io
+url: https://epic-hust.github.io
 baseurl: /EPIC-Slurm-Cluster
 
 remote_theme: just-the-docs/just-the-docs@v0.12.0
@@ -13,7 +13,7 @@ nav_enabled: true
 
 aux_links:
   GitHub 仓库:
-    - https://github.com/loren5555/EPIC-Slurm-Cluster
+    - https://github.com/epic-hust/EPIC-Slurm-Cluster
 
 exclude:
   - superpowers

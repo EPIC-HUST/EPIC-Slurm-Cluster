@@ -33,4 +33,4 @@ EPIC 集群通过 Open OnDemand 提供网页入口，通过 Slurm 提交和管�
 - [IAPP 开发](developer/03-apps.md)
 - [Other：操作与历史记录](other/index.md)
 
-[提交 Issue](https://github.com/loren5555/EPIC-Slurm-Cluster/issues/new/choose) 前，请先查看对应读者文档并附上最小复现信息。
+[提交 Issue](https://github.com/epic-hust/EPIC-Slurm-Cluster/issues/new/choose) 前，请先查看对应读者文档并附上最小复现信息。

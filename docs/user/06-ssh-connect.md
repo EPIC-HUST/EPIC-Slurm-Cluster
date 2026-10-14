@@ -14,7 +14,7 @@ nav_order: 6
 
 ### 1. 确认 SSH 权限
 
-SSH 权限由管理员根据 `users.yml` 中的 `ssh_access` 配置。拥有 OOD 账号不代表自动拥有每台计算主机的 SSH 权限；如果目标主机没有出现在你的授权范围内，SSH 和 Remote Files 都不会开放。具体权限查看[集群用户注册文件](https://github.com/loren5555/EPIC-Slurm-Cluster/blob/main/ansible/vars/users.yml)
+SSH 权限由管理员根据 `users.yml` 中的 `ssh_access` 配置。拥有 OOD 账号不代表自动拥有每台计算主机的 SSH 权限；如果目标主机没有出现在你的授权范围内，SSH 和 Remote Files 都不会开放。具体权限查看[集群用户注册文件](https://github.com/epic-hust/EPIC-Slurm-Cluster/blob/main/ansible/vars/users.yml)
 
 Ansible会为每个用户在控制节点生成一套独立的集群密钥：
 
