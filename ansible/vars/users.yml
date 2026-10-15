@@ -498,7 +498,7 @@ cluster_users:
       - individual
     ssh_access:
       - epic-cluster-compute-a100-01
-  - name: 
+  - name: xiaojiayi
     uid: 12021
     gid: 12021
     slurm_account: mllms
