@@ -498,6 +498,16 @@ cluster_users:
       - individual
     ssh_access:
       - epic-cluster-compute-a100-01
+  - name: 
+    uid: 12021
+    gid: 12021
+    slurm_account: mllms
+    home: /home/xiaojiayi
+    shell: /bin/bash
+    groups:
+      - MLLMs
+    ssh_access:
+      - epic-cluster-compute-a100-01
 
 # Access groups contain stable names and GIDs only. Exact membership is derived
 # from cluster_users[].groups so it is maintained in one place.
