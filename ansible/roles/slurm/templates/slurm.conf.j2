@@ -16,6 +16,13 @@ SlurmdSpoolDir={{ slurm_compute_spool_directory }}
 SlurmctldPidFile=/run/slurmctld/slurmctld.pid
 SlurmdPidFile=/run/slurmd/slurmd.pid
 
+# Network failure detection, job startup, and cleanup tolerance.
+SlurmdTimeout={{ slurm_slurmd_timeout }}
+MessageTimeout={{ slurm_message_timeout }}
+BatchStartTimeout={{ slurm_batch_start_timeout }}
+UnkillableStepTimeout={{ slurm_unkillable_step_timeout }}
+ReturnToService={{ slurm_return_to_service }}
+
 # Logging
 SlurmctldLogFile={{ slurm_log_directory }}/slurmctld.log
 SlurmdLogFile={{ slurm_log_directory }}/slurmd.log
@@ -29,7 +36,6 @@ SelectType=select/cons_tres
 SelectTypeParameters=CR_Core_Memory
 GresTypes=gpu,shard
 MpiDefault=none
-ReturnToService=2
 
 # Classic fairshare balances personal and Account usage. TRES priority is
 # normalized by partition capacity; Job QoS never preempts a running job.

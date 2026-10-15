@@ -9,6 +9,15 @@ slurm_controller_host: epic-cluster-controller-01
 
 slurm_partition_max_time: "14-00:00:00"
 
+# Tolerate transient network and storage stalls before declaring a failure.
+# ReturnToService recovers valid DOWN nodes, but does not clear DRAIN flags.
+slurm_slurmd_timeout: 3600
+slurm_message_timeout: 120
+slurm_batch_start_timeout: 900
+# Must remain at least five times slurm_message_timeout.
+slurm_unkillable_step_timeout: 1800
+slurm_return_to_service: 2
+
 # Association limits are enforced after work package 4 has populated SlurmDBD.
 # Classic fairshare combines personal and Account usage without ranking whole
 # Accounts ahead of one another. Waiting age and resource size also contribute.
