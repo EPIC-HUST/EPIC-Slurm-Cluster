@@ -89,7 +89,7 @@ Prometheus、Grafana、OOD、node_exporter、nvitop-exporter 和 DCGM Exporter �
 4. `slurmdbd.yml`：配置 MariaDB/SlurmDBD；
 5. `slurm_associations.yml`：创建 Account、QoS 和分区 Association；
 6. `administrators.yml`：配置管理员权限；
-7. `slurm.yml`：最后开启记账连接、Association 强制和 Fair Tree；
+7. `slurm.yml`：最后开启记账连接、Association 强制和声明的公平份额与预留策略；
 8. `grafana.yml`、`monitoring.yml`：配置监控和展示；
 9. `ood.yml`：最后发布门户、IAPP 和 Remote Files；
 10. `disk_quotas.yml`：发布已初始化文件系统的配额策略。

@@ -10,14 +10,18 @@ slurm_controller_host: epic-cluster-controller-01
 slurm_partition_max_time: "14-00:00:00"
 
 # Association limits are enforced after work package 4 has populated SlurmDBD.
-# Fair Tree primarily reflects each user's recent, decaying resource usage.
+# Classic fairshare combines personal and Account usage without ranking whole
+# Accounts ahead of one another. Waiting age and resource size also contribute.
 slurm_accounting_storage_enforce: limits,qos
-slurm_priority_decay_half_life: "14-0"
+slurm_scheduler_parameters: "bf_min_age_reserve=43200,bf_min_prio_reserve=70000,bf_job_part_count_reserve=1"
+slurm_priority_flags: NO_FAIR_TREE
+slurm_priority_decay_half_life: "7-0"
 slurm_priority_calculation_period: 5
 slurm_priority_max_age: "7-0"
-slurm_priority_weight_fairshare: 10000
-slurm_priority_weight_age: 3000
-slurm_priority_weight_qos: 30000
+slurm_priority_weight_fairshare: 100000
+slurm_priority_weight_age: 70000
+slurm_priority_weight_tres: "CPU=10000,GRES/gpu=10000,GRES/shard=10000"
+slurm_priority_weight_qos: 100000
 
 slurm_configuration_directory: /etc/slurm
 slurm_controller_state_directory: /var/lib/slurm/slurmctld
