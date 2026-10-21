@@ -156,6 +156,17 @@ cluster_users:
       - epic-cluster-compute-a100-01
       - epic-cluster-compute-rtx4070-01
       - epic-cluster-compute-rtx4070-02
+  - name: zhangzhihao
+    uid: 10014
+    gid: 10014
+    slurm_account: epic-rl
+    home: /home/zhangzhihao
+    shell: /bin/bash
+    groups:
+      - EPIC-RL
+    ssh_access:
+      - epic-cluster-compute-a100-01
+      - epic-cluster-compute-rtx4070-01
 
   - name: jingnanwang
     uid: 10999
