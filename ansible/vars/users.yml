@@ -156,9 +156,19 @@ cluster_users:
       - epic-cluster-compute-a100-01
       - epic-cluster-compute-rtx4070-01
       - epic-cluster-compute-rtx4070-02
-  - name: zhangzhihao
+  - name: zhangwenhui
     uid: 10014
     gid: 10014
+    slurm_account: epic-rl
+    home: /home/zhangwenhui
+    shell: /bin/bash
+    groups:
+      - EPIC-RL
+    ssh_access:
+      - epic-cluster-compute-a100-01
+  - name: zhangzhihao
+    uid: 10015
+    gid: 10015
     slurm_account: epic-rl
     home: /home/zhangzhihao
     shell: /bin/bash
@@ -178,16 +188,7 @@ cluster_users:
       - EPIC-RL
     ssh_access:
       - epic-cluster-compute-a100-01
-  - name: zhangwenhui
-    uid: 10014
-    gid: 10014
-    slurm_account: epic-rl
-    home: /home/zhangwenhui
-    shell: /bin/bash
-    groups:
-      - EPIC-RL
-    ssh_access:
-      - epic-cluster-compute-a100-01
+
   - name: chenjunhao
     uid: 11001
     gid: 11001
