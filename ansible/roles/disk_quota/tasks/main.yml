@@ -32,7 +32,25 @@
     label: "{{ item.filesystem }}"
   changed_when: false
 
-- name: Apply block and inode quotas to managed users
+- name: Read existing user limits without changing quota records
+  ansible.builtin.command:
+    argv:
+      - repquota
+      - -u
+      - -n
+      - -p
+      - -v
+      - "{{ item.filesystem }}"
+  environment:
+    LC_ALL: C
+  register: disk_quota_reports
+  check_mode: false
+  changed_when: false
+  loop: "{{ disk_quotas }}"
+  loop_control:
+    label: "{{ item.filesystem }}"
+
+- name: Apply only new or changed block and inode quotas
   ansible.builtin.command:
     argv:
       - setquota
@@ -43,13 +61,17 @@
       - 0
       - 0
       - "{{ quota.filesystem }}"
-  loop: "{{ disk_quotas | product(cluster_users) | list }}"
+  loop: "{{ disk_quota_reports.results | product(cluster_users) | list }}"
   vars:
-    quota: "{{ item.0 }}"
+    quota: "{{ item.0.item }}"
     user: "{{ item.1 }}"
   loop_control:
     label: "{{ user.name }} on {{ quota.filesystem }}"
-  changed_when: false
+  # Rewriting an unchanged record can disturb an existing grace deadline.
+  when: >-
+    item.0.stdout | quota_limits_differ(
+      user.uid, (quota.soft_gib | int) * 1024 * 1024,
+      (quota.hard_gib | int) * 1024 * 1024)
 
 - name: Install the OOD quota collector
   ansible.builtin.template:

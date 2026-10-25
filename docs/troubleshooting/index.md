@@ -40,6 +40,7 @@ has_children: true
 - [Association 强制导致正常用户无法提交](13-association-enforcement.md)
 - [Identity 预检报 UID/GID 冲突](14-identity-conflict.md)
 - [SSH 预检报受管用户不存在](15-ssh-preflight.md)
+- [Slurm 命令输出截断与格式设置](16-slurm-output-format.md)
 
 仍无法解决时，提交 Issue，并附上主机、分区、作业号、失败 task、复现步骤和经过脱敏的
 必要日志。
