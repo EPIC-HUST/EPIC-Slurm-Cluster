@@ -97,6 +97,7 @@ Account、Linux access group 和 SSH 主机：
    ```bash
    sudo /usr/bin/htpasswd /etc/ood/auth/htpasswd <username>
    ```
+   <span style="color:red">创建密码时要求用户使用强密码，用简单密码的被发现了会被我干掉。（干掉计数：3）</span>
 
 `user_onboarding.yml` 的固定顺序是：
 
