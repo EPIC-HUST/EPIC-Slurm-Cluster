@@ -192,16 +192,16 @@ cluster_users:
   # endregion EPIC-RL
 
   # region CGCL
-  - name: chenjunhao
-    uid: 11001
-    gid: 11001
-    slurm_account: cgcl
-    home: /home/chenjunhao
-    shell: /bin/bash
-    groups:
-      - CGCL
-    ssh_access:
-      - epic-cluster-compute-a100-01
+  # - name: chenjunhao
+  #   uid: 11001
+  #   gid: 11001
+  #   slurm_account: cgcl
+  #   home: /home/chenjunhao
+  #   shell: /bin/bash
+  #   groups:
+  #     - CGCL
+  #   ssh_access:
+  #     - epic-cluster-compute-a100-01
   - name: sunxuju
     uid: 11002
     gid: 11002
@@ -217,6 +217,16 @@ cluster_users:
     gid: 11003
     slurm_account: cgcl
     home: /home/zhujunwu
+    shell: /bin/bash
+    groups:
+      - CGCL
+    ssh_access:
+      - epic-cluster-compute-a100-01
+  - name: liuyiming
+    uid: 11004
+    gid: 11004
+    slurm_account: cgcl
+    home: /home/liuyiming
     shell: /bin/bash
     groups:
       - CGCL
