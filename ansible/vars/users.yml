@@ -507,6 +507,16 @@ cluster_users:
     groups:
       - CV3D
     ssh_access:
+      - epic-cluster-compute-a100-01  
+  - name: wangyuzhe
+    uid: 13008
+    gid: 13008
+    slurm_account: cv3d
+    home: /home/wangyuzhe
+    shell: /bin/bash
+    groups:
+      - CV3D
+    ssh_access:
       - epic-cluster-compute-a100-01
   # endregion CV3D
 
