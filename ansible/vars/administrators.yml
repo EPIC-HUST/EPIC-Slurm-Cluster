@@ -10,7 +10,7 @@ epic_operators:
   - yinjiajie
   - wangzhaoxuan
   - lijiahui
-  - chenjunhao
+  - liuyiming
 
 # The deployment checkout stays owned by the existing administrator account.
 # Operators may update its protected main branch and run only listed playbooks.
