@@ -454,7 +454,17 @@ cluster_users:
     groups:
       - MLLMs
     ssh_access:
-      - epic-cluster-compute-a100-01    
+      - epic-cluster-compute-a100-01
+  - name: gaoyutong
+    uid: 12023
+    gid: 12023
+    slurm_account: mllms
+    home: /home/gaoyutong
+    shell: /bin/bash
+    groups:
+      - MLLMs
+    ssh_access:
+      - epic-cluster-compute-a100-01
   # endregion MLLMs
 
   # region CV3D
